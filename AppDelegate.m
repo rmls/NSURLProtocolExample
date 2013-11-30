@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 
+#import "MyURLProtocol.h"
+
 @implementation AppDelegate
 
 @synthesize managedObjectContext = _managedObjectContext;
@@ -17,6 +19,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+    [NSURLProtocol registerClass:MyURLProtocol.class];
+    
     return YES;
 }
 							
